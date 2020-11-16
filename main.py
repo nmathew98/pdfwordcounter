@@ -27,6 +27,9 @@ for file in files:
 	# Print occurences to a file
 	with open('occurences.txt', 'a') as f:
 		print(f"File: {file} [{len(pdf)} pages]; Date: {datetime.date.today()}", file=f)
+		total_occurences = 0
 		for k, v in dictionary.items():
 			print(f"{k}: {v}", file=f)
+			total_occurences += v
+		print(f"Total matched words: {total_occurences}", file=f)
 		print("", file=f)
