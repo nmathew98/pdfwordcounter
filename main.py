@@ -26,7 +26,7 @@ for file in files:
 
 	# Print occurences to a file
 	with open('occurences.txt', 'a') as f:
-		print(f"Filename: {file} [{len(pdf)} pages]; Date: {datetime.date.today()}", file=f)
+		print(f"File: {file} [{len(pdf)} pages]; Date: {datetime.date.today()}", file=f)
 		for k, v in dictionary.items():
 			print(f"{k}: {v}", file=f)
 		print("", file=f)
